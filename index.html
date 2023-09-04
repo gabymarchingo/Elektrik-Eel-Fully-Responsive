@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektrik Eel Festival</title>
+    <meta name="author" content="Gaby Marchingo"/>
+    <meta name="description" content="Assessment 2 Eletrik Eel Festival Website usinf html and css"/>
+    <!-- links -->
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@200;500&display=swap" rel="stylesheet"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Serif+Georgian:wght@200;500&display=swap" rel="stylesheet"/>
+    <script type="text/javascript" src="jquery-3.7.0.min.js"></script>
+    <script defer type="text/javascript" src="/javascript/javascript.js"></script>
+
+    <script>
+    
+// functions in javascript
+      function onSubmit() {
+          alert("Your Form Has Benn Submitted")}
+        
+      // function glass() {
+      // alert("You have reached the search")}
+     
+  // blink the heading
+  function blink() {
+    $("#heading").fadeOut();
+    $("#heading").fadeIn();
+  }
+  setInterval (blink, 2000);
+
+  // countdown
+
+let countDownDate = new Date("Aug 30, 2023 15:37:25").getTime();
+
+
+let x = setInterval(function() {
+
+  
+  let now = new Date().getTime();// today's date and time
+    
+   
+  let distance = countDownDate - now;
+    
+  
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "The Early Bird offer has Expired";
+  }
+}, 1000);
+
+// exchange words
+$(document).ready(function() {
+  let words = ['exciting', 'entralling', 'eye-catching', 'exhilarating', 'inviting', 'engrossing','engaging','alluring', 'appealing','electrifying']; // Array of different words to use in the loop
+  let currentIndex = 0;
+
+  function replaceWord() {
+    $('#wordToReplace').text(words[currentIndex]);
+    currentIndex = (currentIndex + 1) % words.length; 
+  }
+
+  
+  setInterval(replaceWord, 2000);
+});
+
+</script>
+     
+
+
+
+      
+      
+  </head>
+
+  <body>
+
+    <header class="top-elements">
+
+    
+    <!--logo-->
+
+<div class="container">
+  <a href="#"><svg viewbox="0 0 100 30 preserveAspectRadius">
+      
+ 
+      <circle class="blue"cx="59" cy="15" r="20" stroke="black" stroke-width="1"fill="rgb(7, 203, 237)"></circle>
+      <circle class="pink" cx="53" cy="15" r="20" stroke="black" stroke-width="1"fill="rgb(222, 91, 204)"></circle>
+<text x="18.5%" y="15" text-anchor="middle" dominant-baseline="middle" >EEF</text>
+</a> </svg>
+
+</div>
+<!-- date and time -->
+<div id="time-and-date"></div>
+<!-- <div class="main"> -->
+  <!--magnifying glass-->
+<!-- <i id="glass" class="fa-solid fa-magnifying-glass" onclick="glass()"></i>   -->
+<div class="search-wrapper">
+<input class="search" type="search" placeholder="Search...">
+</div>
+<div class="hamburger-icon">
+  <i id="hamberger-icon-icon" class="fa-solid fa-bars"></i>
+</header>
+   
+</div>
+<!-- scroll button  -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<!-- <section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a id="menu-title" href="#!">Menu</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#dates">Dates</a></li>
+        <li><a href="artists.html">Artists</a></li>
+    
+        <li><a href="#ticket-information">Ticket Prices</a></li>
+        <li><a href="#tickets-form">Buy Tickets</a></li>
+        <li><a href="sign-up.html">Newsletter</a></li>
+          </ul>        
+      </ul>
+    </nav>
+  </div>
+</section>
+
+ -->
+
+
+
+
+<!-- copy -->
+<h1 id="heading">ELEKTRIK EEL FESTIVAL</h1>
+    <center>
+   
+    <img id="initial-crowd" src="photos/crowds/crowd.jpg" alt ="crowd of people at a festival" height="400" width="auto" />
+    <div class="content">Crowd enjoying last Elektrik Eel Festival 2022
+    </center>
+  
+  
+    <H2><em >Elektrik Eel Festival </em>runs over <em class="pink"> 3 days </em>with over<em class="pink"> 120 artists </em>playing across 12 stages at the Royal Park in Melbourne, Australia</H2>
+    <h3>With cutting-edge live shows and both international superstars of tomorrow, Elektrik Eel showcases the brightest acts from the world</h3>
+  
+    
+    <p class="initial-sentence">Engage your senses and become immersed in an <strong id="wordToReplace"> electrifying</strong> aural universe</p>
+    
+<!-- dates -->
+<h4 class="pink" id="dates">Festival Dates</h4>
+<div class="dates">
+<p class="dates">Brisbane 19th December 2023</p>
+<p class="dates">Sydney 20th December 2023</p>
+<p class="dates">Melbourne 21st December 2023</p>
+</div>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d453477.6536737166!2d152.99319645!3d-27.3821429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1689828698494!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d211983.05919972484!2d151.17367396874963!3d-33.88359336739762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1689828912446!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d403356.36784284416!2d145.00369682343754!3d-37.8316971880902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1689828972948!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<br>
+<!-- buttons -->
+    <a class="button"href="#">Home</a>
+
+    <a class="button" href="#ticket-information">Ticket Info</a>
+    <a class="button" href="#line-up"> Artist Lineup</a>
+   <a class="button"href="#tickets-form">Buy Now!</a>
+
+    <!-- ticket info -->
+    
+    
+    <H4 id="ticket-information">Ticket info:</H4>
+    <p class = "first-line">Early bird tickets are on sale now for a limited time only</p>
+    
+    <div class="price-grid">
+    
+    <a  href="#title" class="price-box">Early Bird Price $205!<a>
+      <a  href="#title" class="price-box">Full Price $340.<a>
+        <a  href="#title" class="price-box">Single Day $110!<a>
+    </div>
+    <P class="last-line">*Early bird price ends in August, when ticket costs for 3 days will change to full price.</P>
+
+
+    <p id="countdown"></p>
+
+  <a id="link" href="#tickets-form">Click Here To Buy Tickets Now</a>
+  
+  
+  <p id="line-up"class="line-up">Artist Line-up</p>
+
+<!-- alt lineup -->
+
+<div class="artist-wrapper">
+<div class="circle-container">
+  <svg class="circle-svg" width="200" height="200">
+    <circle cx="50" cy="150" r="80"  stroke="rgb(7, 203, 237)" stroke-width="3"/>
+  </svg>
+  <img class="offset-image" src="photos/artists/oscar mulero.jpg" alt="picture of oscar mulero" />
+</div>
+
+<p class="artist-name">Oscar Mulero</p>
+<div class="artist-wrapper"></div>
+<div class="circle-container">
+  <svg class="circle-svg" width="200" height="200">
+    <circle cx="50" cy="150" r="80"  stroke="rgb(222, 91, 204" stroke-width="3"/>
+  </svg>
+  <img class="offset-image" src="photos\artists\ritcxhie hawtin.jpg" />
+</div>
+<p class="artist-name">Ritchie Hawkin</p>
+<div class="circle-container">
+  <svg class="circle-svg" width="200" height="200">
+    <circle cx="50" cy="150" r="80"  stroke="rgb(235, 175, 84)" stroke-width="3"/>
+  </svg>
+  <img class="offset-image" src="photos/artists/Surgeon-.jpg" alt="picture of the artist surgeon" />
+</div>
+<p class="artist-name">Surgeon</p>
+<div class="circle-container">
+  <svg class="circle-svg" width="200" height="200">
+    <circle cx="50" cy="150" r="80"  stroke="rgb(222, 91, 204)" stroke-width="3"/>
+  </svg>
+  <img class="offset-image" src="photos/artists/robag.jpg" alt="picture of the artist robag" />
+</div>
+<p class="artist-name">Robag Wruhme</p>
+<div class="circle-container">
+  <svg class="circle-svg" width="200" height="200">
+    <circle cx="50" cy="150" r="80"  stroke="rgb(7, 203, 237)" stroke-width="3"/>
+  </svg>
+  <img class="offset-image" src="photos/artists/robert hood.jpeg" alt="picture of robert hood" />
+</div>
+<p class="artist-name">Robert Hood</p>
+</div>
+<p class="many-more">And many more Artists appearing</p>
+</div>
+ 
+  
+<!-- form -->
+  <h5 id="title">Ticket Form</h5>
+      <p id="description">This is a form to reserve Tickets. Please complete</p>
+      
+      <form action="/action.php" id="tickets-form"onsubmit="onSubmit()">
+        <fieldeset >
+          
+          <label id="name-label">Enter your name:* <input id="name" type="text" name="name" placeholder="Enter Name" required ></input></label>
+         
+          <label id="email-label">Enter your email:* <input id="email" type="email" name="email" placeholder="email@example.com" required></label>
+
+
+          <label id="number-label">Enter the number of Tickets required:* <input id="quantity" type="number" pattern="[0-9]" min="1" max="50" value="2" name="quantity" placeholder="Enter Number of Tickets Required" required></input></label>        </fieldset>
+        <label id="date">Enter Date of Preferred Festival Date: <input id="date" type="date" name="date" placeholder="Choose Date" required ></input></label>
+        <label id="number-label-days">Enter the number of Days Attending:* <input id="days" type="number" pattern="[0-9]" min="1" max="3" value="3" name="days" placeholder="Enter Number of Days Attending" required></input></label>
+        <fieldset>
+          <label>Which City Location Festival are You Attending?*
+          <select id="dropdown">
+          <option>Brisbane</option>
+          <option>Sydney</option>
+          <option>Melbourne</option>
+        </select>
+        </label>
+        </fieldset>
+        <fieldset>
+          <div class="choice">
+            <label class="door-post" id="sentence-for-radios">Would you prefer to pickup at door or sent to email?*<input id="door" type="radio" value="door-post" 
+            name="door-post"/> Pick up at door</label>
+          </div>
+          <div class="choice">
+          <label class="door-post"><input id="post" type="radio" value="door-post" 
+          name="door-post"/> Send to my email</label>
+        </div>  
+        </fieldset>
+      </label>
+      <fieldset>
+       <div class="yes">
+        <label>Would you like further promotions emailed to you?
+        <input id="yes" type="checkbox"
+        value="yes-no" /> Yes</label></div>
+        <p class="required-field">Fields marked with a * are required</p>
+      <input type="submit" value="Submit" id="submit" onsubmit=""/>
+    
+    </fieldset>    
+    </form>
+  
+      <!--logo-->
+
+<div class="container-2">
+  <a href="#"><svg viewbox="0 0 100 30 preserveAspectRadius">
+      
+ 
+      <circle class="blue"cx="59" cy="15" r="20" stroke="black" stroke-width="1"fill="rgb(7, 203, 237)"></circle>
+      <circle class="pink" cx="53" cy="15" r="20" stroke="black" stroke-width="1"fill="rgb(222, 91, 204)"></circle>
+<text x="18.5%" y="15" text-anchor="middle" dominant-baseline="middle" >EEF</text>
+</a> </svg>
+</div>
+<!-- testimonial -->
+
+<div class="slideshow-container">
+  <div class="mySlides fade"></div>
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>Testimonials</blockquote>
+</div>
+  <div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>I went in 2022 and the atmosphere was amazing. So many bands and artists. Would highly recommend</blockquote>
+  </div>
+  <div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>10/10 for the experience. Bands and artists were amazing</blockquote>
+</div>
+  <div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>Can't wait for 2023 Brisbane! All my mates are coming this year. We're going to party bigtime!</blockquote>
+</div>
+<div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>Best fesitval value for money out there.</blockquote>
+</div>
+<div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>The next festival can't come soon enough.</blockquote>
+</div>
+  <div class="mySlides fade">
+  <i class="fa-solid fa-comments" id="testimonial-icon"></i>
+  <blockquote>Can't recommend this highly enough. 2022 was a blast! Roll on 2023!</blockquote>
+</div>
+ 
+ 
+</div>
+<!-- next and previous buttons -->
+<div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+
+
+
+
+<!-- socials  -->
+        <div class="socials"> 
+          
+          <a href="https://www.tiktok.com/login" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fwww.spotify.com%2Fau%2Faccount%2Ftwostepauth%2Fmanage%2F&max_age=0" target="_blank"><i id="spotify"class="fa-brands fa-spotify"></i></a> 
+         <a href="https://www.facebook.com/login/" target="_blank"> <i id="facebook"class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.youtube.com/" target="_blank"> <i id="youtube"class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank"> <i id="instagram"class="fa-brands fa-instagram"></i></a>
+          </div> 
+          <!-- footer -->
+          <footer>
+            <div class="column" id="site-map">Site Map
+            
+            </div>
+            <div class="column">Privacy
+            
+            </div>
+            <div class="column">Copyright
+            
+            </div>
+            <div class="column">About Us
+            
+            </div>
+            <div class="column">Contact Info
+            </div>
+            
+            <div class="column">Search
+            
+            </div>
+            <div class="column">Buy Tickets
+            
+            </div>
+            <div class="column">Back
+            
+            </div>
+            </footer>
+            <!-- copyright -->
+            <div><p class="copyright">&copy Copyright 2023</p></div>
+          </body>   
+ 
+</html>
+
+<!-- Photo references
+https://musictech.com/news/gear/surgeon-techno-technology-basic-hardware/
+
+https://www.digitaldjtips.com/richie-hawtin-speaks-out-about-rock-star-djs/
+
+https://www.beatportal.com/features/cover-story-robert-hood-thinks-techno-is-losing-its-soul/
+
+https://www.festscanner.com/djs/oscar-mulero
+
+https://mixing.dj/robag-wruhme-the-birdhouse-209/ -->
+
+<!-- jock boyd
+https://open.spotify.com/artist/59GJRTFK8O0XHSMjx2R2CL
+
+peter mckinnon
+https://www.youtube.com/watch?v=_bZ5b9rpXyM
+
+boris brejcha
+https://www.electricsoul.com/artist/boris-brejcha
+
+dj muller
+https://www.facebook.com/mullerdjoficial/
+
+dj rekab
+https://www.last.fm/music/Rekab
+
+emperors
+https://www.youtube.com/watch?v=JCC9thDM53o
+
+the chevelles
+https://www.thechevelles.com/
+
+coerce
+https://killyourstereo.com/news/coerce-release-studio-video/4RH59fT39vk/13-09-12
+
+femme fatales
+https://enhancentertainment.com.au/femme-fatales/
+
+hawks of alba
+https://twitter.com/i/flow/login?redirect_after_login=%2Fhawksofalba
+
+the thieves
+https://www.abc.net.au/triplejunearthed/artist/thieves-2/
+
+aforementioned
+https://www.audionetwork.com/content/the-edit/expertise/electronic-music-genres -->
